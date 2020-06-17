@@ -1,0 +1,17 @@
+{% extends "melbournehseprice/base.html" %}
+
+{% block content %}
+  <h2>Locations</h2> 
+    <ul>
+      {% for location in location_list %}
+        <li>Suburb: {{ location.suburb }} </li>  
+        <li>Address: {{ location.address }}</li>
+        <li>Postcode: {{ location.postcode }}</li>
+        <li>Property Count: {{ location.property_count}}</li>
+        <li>Distance: {{ location.distance|floatformat:2 }}</li>
+        <li>House: {{location.house }}</li>
+      {% endfor %}
+    </ul>
+    
+
+{% endblock %} 
