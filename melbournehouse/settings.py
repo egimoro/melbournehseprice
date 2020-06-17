@@ -119,3 +119,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
+# Date and time input formats
+
+DATE_INPUT_FORMATS = ['%d-%m-%Y', '%d/%m/%Y', '%m-%d-%Y', '%Y-%m-%d']

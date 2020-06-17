@@ -4,7 +4,7 @@
   <h2>Locations</h2> 
     <ul>
       {% for location in location_list %}
-        <li>Suburb: {{ location.suburb }} </li>  
+        <li>Suburb: <a href="{% url 'locationdetail' location.pk %}"> {{ location.suburb }} </a> </li>  
         <li>Address: {{ location.address }}</li>
         <li>Postcode: {{ location.postcode }}</li>
         <li>Property Count: {{ location.property_count}}</li>

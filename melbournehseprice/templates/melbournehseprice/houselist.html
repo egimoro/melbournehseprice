@@ -6,7 +6,8 @@
   <ul>
     {% for house in house_list %}
       <li>Rooms: {{ house.rooms }}</li>   
-      <li>Type: {{ house.hsetype }}</li>
+      <li>Type: <a href="{% url 'housedetail' house.pk %}"> {{ house.hsetype }}
+           </a></li>
       <li>Price: {{ house.price | floatformat:2 }}</li>
       <li>Method: {{ house.method }}</li>
       <li>Datesold: {{ house.datesold }}</li>

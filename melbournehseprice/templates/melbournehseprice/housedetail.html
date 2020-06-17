@@ -1,0 +1,11 @@
+{% extends 'melbournehseprice/base.html'%}
+
+{% block content %}
+  <h3>House</h3>
+  <p>Rooms: {{ object.rooms }} </p>
+  <p>Type: {{ object.hsetype }}</p>
+  <p>Price: {{ object.price | floatformat:2 }}</p>
+  <p>Method: {{ object.method }}</p>
+  <p>Datesold: {{ object.datesold }}</p>
+
+{% endblock %}
