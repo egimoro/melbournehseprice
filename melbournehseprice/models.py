@@ -1,5 +1,5 @@
 from django.db import models
-from datetime import datetime
+from django.urls import reverse   
 
 class House(models.Model):
     rooms = models.IntegerField(default=0)
@@ -10,6 +10,10 @@ class House(models.Model):
     
     def __str__(self):
         return self.hsetype
+    
+    def get_absolute_url(self):
+        return reverse('houselist',
+                       kwargs={'pk': self.pk})
     
 
 class Location(models.Model):
@@ -24,7 +28,9 @@ class Location(models.Model):
     def __str__(self):
         return self.suburb
         
-    
+    def get_absolute_url(self):
+        return reverse('locationlist',
+                       kwargs={'pk': self.pk})
     
 
     

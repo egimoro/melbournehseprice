@@ -4,12 +4,22 @@
   <h2>Locations</h2> 
     <ul>
       {% for location in location_list %}
-        <li>Suburb: <a href="{% url 'locationdetail' location.pk %}"> {{ location.suburb }} </a> </li>  
+        <li>Suburb: {{ location.suburb }} </li>  
         <li>Address: {{ location.address }}</li>
         <li>Postcode: {{ location.postcode }}</li>
         <li>Property Count: {{ location.property_count}}</li>
         <li>Distance: {{ location.distance|floatformat:2 }}</li>
         <li>House: {{location.house }}</li>
+        <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Options
+        </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="{% url 'locationdetail' location.pk %}">View</a>
+        <a class="dropdown-item" href="{% url 'location_update' location.pk %}">Update</a>
+        <a class="dropdown-item" href="{% url 'location_delete' location.pk %}">Delete</a>
+      </div>
+      </div>
       {% endfor %}
     </ul>
     

@@ -6,11 +6,21 @@
   <ul>
     {% for house in house_list %}
       <li>Rooms: {{ house.rooms }}</li>   
-      <li>Type: <a href="{% url 'housedetail' house.pk %}"> {{ house.hsetype }}
+      <li>Type:  {{ house.hsetype }}
            </a></li>
       <li>Price: {{ house.price | floatformat:2 }}</li>
       <li>Method: {{ house.method }}</li>
       <li>Datesold: {{ house.datesold }}</li>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Options
+        </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="{% url 'housedetail' house.pk %}">View</a>
+        <a class="dropdown-item" href="{% url 'house_update' house.pk %}">Update</a>
+        <a class="dropdown-item" href="{% url 'house_delete' house.pk %}">Delete</a>
+      </div>
+      </div>
     {% endfor %}      
   </ul>
 
