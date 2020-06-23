@@ -10,6 +10,7 @@
     {% load static %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'melbournehseprice/style.css'%}">
+
     <title>{% block title %} Hello, Melbourne!{% endblock %}</title>
   </head>
   <body>
@@ -32,9 +33,10 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'locationlist' %}">List of Locations of sold houses</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'location_create' %}">Enter a Location</a> 
+       <li class="nav-item">
+        <a class="nav-link" href="{% url 'location_create' %}">Enter a Location</a>
       </li>
+      
     </ul>
     </nav>
 

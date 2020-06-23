@@ -1,10 +1,13 @@
 {% extends 'melbournehseprice/base.html'%}
 
 {% block content %}
+<div>
   <h3>Location</h3>
   <p>{{ object.suburb }}</p>
   <p>{{ object.address }}</p>
   <p>{{ object.postcode }}</p>
   <p>{{ object.property_count }}</p>
   <p>{{ object.distance | floatformat:2 }}</p>
-{% endblock %}
+  <span><a href="{% url 'locationlist' %}">Locations</a></span> 
+</div>
+{% endblock %} 

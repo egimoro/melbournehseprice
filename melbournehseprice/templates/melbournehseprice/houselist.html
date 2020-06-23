@@ -3,11 +3,11 @@
 {% block content %}
 
   <h2>Houses</h2>
+  <div>
   <ul>
     {% for house in house_list %}
       <li>Rooms: {{ house.rooms }}</li>   
-      <li>Type:  {{ house.hsetype }}
-           </a></li>
+      <li>Type:  {{ house.hsetype }}</li>
       <li>Price: {{ house.price | floatformat:2 }}</li>
       <li>Method: {{ house.method }}</li>
       <li>Datesold: {{ house.datesold }}</li>
@@ -23,5 +23,6 @@
       </div>
     {% endfor %}      
   </ul>
-
+  <span><a href="{% url 'index' %}">Home</a></span> 
+</div>
 {% endblock  %}   

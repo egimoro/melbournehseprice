@@ -1,4 +1,13 @@
 {% extends 'melbournehseprice/base.html' %}
 {% block content %}
-  <h1>Hello, Melbourne!</h1>
-{% endblock%}
+{% load static %}
+<script src="{% static '/javascript/app.js'%}" type="text/javascript"></script>
+<div class="home">
+ 
+  <h2>Select the following actions</h2>
+    <p><a href="{% url 'houselist' %}">View houses sold</a></p>
+    <p><a href="{% url 'house_create' %}">Enter a House</a></p>
+    <p><a href="{% url 'locationlist' %}">View Locations of houses sold</a></p>
+    <p><a href="{% url 'location_create' %}">Enter a Location</a></p>
+</div>
+{% endblock%}    

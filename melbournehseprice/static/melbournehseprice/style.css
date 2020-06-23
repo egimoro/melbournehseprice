@@ -1,2 +1,12 @@
 body {
-  background-color: #F7F7F7;}
+  background-color: #F7F7F7;
+  overflow: grid-auto-flow;
+  }
+  
+div {
+  margin-top: 100px;
+  margin-bottom: 150px;
+  margin-right: 50px;
+  margin-left: 80px;
+  
+  }     

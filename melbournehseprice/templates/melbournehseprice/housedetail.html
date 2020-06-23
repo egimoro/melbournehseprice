@@ -7,5 +7,5 @@
   <p>Price: {{ object.price | floatformat:2 }}</p>
   <p>Method: {{ object.method }}</p>
   <p>Datesold: {{ object.datesold }}</p>
-
+  <span><a href="{% url 'houselist' %}">Houses</a></span>   
 {% endblock %}

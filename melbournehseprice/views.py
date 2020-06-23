@@ -41,7 +41,10 @@ class LocationDetail(DetailView):
 class CreateHouse(CreateView):
     model = House
     fields = '__all__'
-    template_name_suffix = '_form'
+    template_name = 'melbournehseprice/house_create.html'
+    
+    success_url = reverse_lazy('houselist')
+    
     
 class UpdateHouse(UpdateView):
 
@@ -49,7 +52,7 @@ class UpdateHouse(UpdateView):
     
     fields = '__all__'
     
-    template_name_suffix = '_form'
+    template_name = 'melbournehseprice/house_update.html'
     
     success_url = reverse_lazy('houselist')
     
@@ -63,7 +66,10 @@ class HouseDelete(DeleteView):
 class CreateLocation(CreateView):
     model = Location
     fields = '__all__'
-    template_name_suffix = '_form'
+    template_name = 'melbournehseprice/location_create.html'
+    
+    success_url = reverse_lazy('locationlist')
+    
 
 
 class UpdateLocation(UpdateView):
@@ -72,7 +78,7 @@ class UpdateLocation(UpdateView):
     
     fields = '__all__'
     
-    template_name_suffix = '_form'
+    template_name = 'melbournehseprice/location_update.html'
     
     success_url = reverse_lazy('locationlist')
     

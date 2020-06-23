@@ -120,9 +120,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'static')
 
 # Date and time input formats
 
